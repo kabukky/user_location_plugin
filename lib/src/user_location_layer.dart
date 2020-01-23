@@ -210,7 +210,9 @@ class _MapsPluginLayerState extends State<MapsPluginLayer>
             right: widget.options.fabRight,
             height: widget.options.fabHeight,
             width: widget.options.fabWidth,
-            child: InkWell(
+            child: Material(
+              type: MaterialType.transparency,
+              child:InkWell(
                 hoverColor: Colors.blueAccent[200],
                 onTap: () {
                   initialize();
@@ -237,7 +239,8 @@ class _MapsPluginLayerState extends State<MapsPluginLayer>
                         ),
                       )
                     : widget.options.moveToCurrentLocationFloatingActionButton),
-          )
+              )
+            )
         : Container();
   }
 
